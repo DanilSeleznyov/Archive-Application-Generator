@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header class="app_header">
+				<div class="app_header_wrapper">
+					<div class="app_logo">
+						<img src="img/docs-svgrepo-com.svg" alt="" />
+					</div>
+					<div class="app_nav">
+						<ul class="app_nav_list">
+							<li class="app_nav_item">
+								<a href="index.html">Головна</a>
+							</li>
+							<li class="app_nav_item">
+								<a href="application.html">Генератор заяв</a>
+							</li>
+							<li class="app_nav_item">
+								<a href="about.html">Про сайт</a>
+							</li>
+						</ul>
+					</div>
+					<div class="app_settings">
+						<!-- <button class="app_settings_button">
+							<img src="img\settings-gear-part-2-svgrepo-com.svg" alt="" />
+						</button>
+						<div class="app_settings_wrapper">
+							<div class="app_settings_language">
+								<div class="app_settings_menu">
+									<div class="app_settings_dropdown">
+										<div class="app_settings_language">
+											<label for="app_language_selector"
+												><img src="img\world-svgrepo-com.svg" alt="" />
+												Language:</label
+											>
+											<select
+												id="app_language_selector"
+												class="app_language_selector"
+											>
+												<option value="en" onselect="changeLanguage('en')">
+													English
+												</option>
+												<option value="uk" onselect="changeLanguage('uk')">
+													Українська
+												</option>
+												<option value="ru" onselect="changeLanguage('ru')">
+													Русский
+												</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</header>
+			<section class="app_main">
+				<div class="app_main_wrapper">
+					<div class="app_main_text">
+						<h2 class="app_title">Заяви до архівних установ України</h2>
+						<p class="app_desc">
+							Цей сайт допомагає швидко та зручно створювати заяви до архівних
+							установ України, забезпечуючи правильне оформлення та економію
+							вашого часу.
+						</p>
+					</div>
+					<div class="app_functions_list">
+						<a href="application.html">
+							<div class="app_functions_list_item">
+								<h2>Генерація заяв до архівів</h2>
+								<p>
+									Введіть необхідну інформацію, і ми автоматично згенеруємо для
+									вас заяву.
+								</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+		</div>
+		<script src="https://unpkg.com/pizzip@3.0.5/dist/pizzip.min.js"></script>
+		<script src="https://unpkg.com/docxtemplater@3.25.3/build/docxtemplater.js"></script>
+		<script src="https://unpkg.com/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/header.js"></script>
+	</body>
+</html>

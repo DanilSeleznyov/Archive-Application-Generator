@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header class="app_header">
+				<div class="app_header_wrapper">
+					<div class="app_logo">
+						<img src="img/docs-svgrepo-com.svg" alt="" />
+					</div>
+					<div class="app_nav">
+						<ul class="app_nav_list">
+							<li class="app_nav_item">
+								<a href="index.html">Головна</a>
+							</li>
+							<li class="app_nav_item">
+								<a href="application.html">Генератор заяв</a>
+							</li>
+							<li class="app_nav_item">
+								<a href="about.html">Про сайт</a>
+							</li>
+						</ul>
+					</div>
+					<div class="app_settings">
+						<!-- <button class="app_settings_button">
+							<img src="img\settings-gear-part-2-svgrepo-com.svg" alt="" />
+						</button>
+						<div class="app_settings_wrapper">
+							<div class="app_settings_language">
+								<div class="app_settings_menu">
+									<div class="app_settings_dropdown">
+										<div class="app_settings_language">
+											<label for="app_language_selector"
+												><img src="img\world-svgrepo-com.svg" alt="" />
+												Language:</label
+											>
+											<select
+												id="app_language_selector"
+												class="app_language_selector"
+											>
+												<option value="en" onselect="changeLanguage('en')">
+													English
+												</option>
+												<option value="uk" onselect="changeLanguage('uk')">
+													Українська
+												</option>
+												<option value="ru" onselect="changeLanguage('ru')">
+													Русский
+												</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</header>
+			<section class="app_main">
+				<div class="app_main_wrapper">
+					<div class="form_main_content">
+						<form class="application_form">
+							<h2>Форма для генерації заяв</h2>
+							<!-- PERMANENT -->
+							<div class="form_permanent form_section">
+								<div class="form_general_info">
+									<h3>Загальна інформація</h3>
+									<div class="form_group">
+										<label for="archive_selection">Архівна установа</label>
+										<select
+											id="archive_selection"
+											name="archive_selection"
+											class="formal"
+                                            onchange="handleArchiveSelection(this.value)"
+											required
+										>
+											<option value="" disabled selected>Оберіть архів</option>
+											<optgroup label="Обласні архіви">
+												<option
+													value="kyiv_archive"													
+												>
+													Державний архів Київської області
+												</option>
+												<!-- <option
+													value="lviv_archive"													
+												>
+													Державний архів Львівської області
+												</option>
+												<option
+													value="odessa_archive"													
+												>
+													Державний архів Одеської області
+												</option> -->
+												<option
+													value="kharkiv_archive"													
+												>
+													Державний архів Харківської області
+												</option>
+												<option
+													value="dnipro_archive"													
+												>
+													Державний архів Дніпропетровської області
+												</option>
+												<!-- <option
+													value="vinnytsia_archive"													
+												>
+													Державний архів Вінницької області
+												</option>
+												<option
+													value="chernivtsi_archive"													
+												>
+													Державний архів Чернівецької області
+												</option>
+												<option
+													value="ivano_frankivsk_archive"													
+												>
+													Державний архів Івано-Франківської області
+												</option> -->
+												<option
+													value="zhytomyr_archive"													
+												>
+													Державний архів Житомирської області
+												</option>
+												<!-- <option
+													value="zaporizhzhia_archive"													
+												>
+													Державний архів Запорізької області
+												</option>
+												<option
+													value="poltava_archive"													
+												>
+													Державний архів Полтавської області
+												</option>
+												<option
+													value="sumy_archive"													
+												>
+													Державний архів Сумської області
+												</option>
+												<option
+													value="chernihiv_archive"													
+												>
+													Державний архів Чернігівської області
+												</option>
+												<option
+													value="khmelnytskyi_archive"													
+												>
+													Державний архів Хмельницької області
+												</option>
+												<option
+													value="mykolaiv_archive"													
+												>
+													Державний архів Миколаївської області
+												</option> -->
+												<option
+													value="cherkasy_archive"													
+												>
+													Державний архів Черкаської області
+												</option>
+												<!-- <option
+													value="rivne_archive"													
+												>
+													Державний архів Рівненської області
+												</option>
+												<option
+													value="ternopil_archive"													
+												>
+													Державний архів Тернопільської області
+												</option>
+												<option
+													value="volyn_archive"													
+												>
+													Державний архів Волинської області
+												</option>
+												<option
+													value="zakarpattia_archive"													
+												>
+													Державний архів Закарпатської області
+												</option>
+												<option
+													value="kropyvnytskyi_archive"													
+												>
+													Державний архів Кіровоградської області
+												</option>
+												<option
+													value="lugansk_archive"													
+												>
+													Державний архів Луганської області
+												</option>
+												<option
+													value="donetsk_archive"													
+												>
+													Державний архів Донецької області
+												</option> -->
+											</optgroup>
+										</select>
+									</div>
+                                    <div class="form_group form_group_radio">
+										<label
+											for="event_type"
+											style="font-size: 18px; font-weight: bold"
+											>Подія</label
+										>
+										<label class="form_radio_wrapper">
+											<input type="radio" class="form_input_radio" name="event_type" id="birth" onclick="handleEventSelection('birth', 'birth')"/>
+											Народження
+										</label>
+										<label class="form_radio_wrapper">
+											<input type="radio" class="form_input_radio" name="event_type" id="marriage" onclick="handleEventSelection('marriage', 'marriage')"/>
+											Шлюб
+										</label>
+										<label class="form_radio_wrapper">
+											<input type="radio" class="form_input_radio" name="event_type" id="divorce" onclick="handleEventSelection('divorce', 'divorce')"/>
+											Розірвання шлюбу
+										</label>
+										<label class="form_radio_wrapper">
+											<input type="radio" class="form_input_radio" name="event_type" id="death" onclick="handleEventSelection('death', 'death')"/>
+											Смерть
+										</label>
+									</div>
+
+									<div class="form_group form_group_date_wrapper">
+										<label>Дата</label>
+										<div id="date_radio_group" class="form_group_date form_group_radio">
+											<label class="form_radio_wrapper" onclick="setDefaultDate()">
+												<input
+													type="radio" class="form_input_radio"
+													name="date_option"
+													value="default"
+													checked
+												/>
+												Сьогоднішня дата
+											</label>
+											<label class="form_radio_wrapper">
+												<input type="radio" class="form_input_radio" name="date_option" value="custom" />
+												Своя дата
+											</label>
+										</div>
+										<input
+											class="formal"
+											type="text"
+											id="date_input"
+											name="date_input"
+											value=""
+											readonly
+											placeholder='«Дня»   Місяця   Року р.'
+                                            oninput="handleInputValues(this.id, this.value)"
+											style="background-color: #e0e0e0; cursor: not-allowed"
+										/>
+                                        <!-- « » -->
+									</div>
+
+                                    <h3>Особиста інформація</h3>
+									<div class="form_group">
+										<label for="your_full_name">Ваше повне ім'я</label>
+										<input
+											class="formal"
+											type="text"
+											id="your_full_name"
+											name="your_full_name"
+											placeholder="Введіть ваше повне ім'я"
+                                            oninput="handleInputValues(this.id, this.value)"
+											required
+										/>
+									</div>
+									<div class="form_group">
+										<label for="address">Адреса</label>
+										<textarea
+											class="formal"
+											id="address"
+											name="address"
+											rows="3"
+                                            oninput="handleInputValues(this.id, this.value)"
+											placeholder="Область, місто, вулиця, номер будинку, квартира"
+											required
+										></textarea>
+									</div>
+									<div class="form_group">
+										<label for="phone">Номер телефону</label>
+										<input
+											class="formal"
+											type="tel"
+											id="phone"
+											name="phone"
+                                            oninput="handleInputValues(this.id, this.value)"
+											placeholder="+380XXXXXXXXX"
+											required
+										/>
+									</div>
+									<div class="form_group">
+										<label for="email">Електронна пошта</label>
+										<input
+											class="formal"
+											type="email"
+											id="email"
+											name="email"
+                                            oninput="handleInputValues(this.id, this.value)"
+											placeholder="example@mail.com"
+											required
+										/>
+									</div>
+								</div>
+							</div>
+							<!-- TEMPORARY -->
+							<div class="form_temporary form_section">
+
+                                <h3>Інформація щодо заяви</h3>
+								<div class="form_application_info">
+									
+								</div>
+								<!-- Submit Button -->
+							</div>
+							<button type="submit" class="form_submit_button">
+								Згенерувати заяву
+							</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+		<script src="https://unpkg.com/pizzip@3.0.5/dist/pizzip.min.js"></script>
+		<script src="https://unpkg.com/docxtemplater@3.25.3/build/docxtemplater.js"></script>
+		<script src="https://unpkg.com/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/header.js"></script>
+		<script src="js/configuration.js"></script>
+		<script src="js/loadcontent.js"></script>
+        <script src="js/generatedocx.js"></script>
+	</body>
+</html>

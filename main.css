@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f0f0f0;
+}
+
+body {
+  font-family: "El Messiri", sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+h3 {
+  font-size: 20px;
+  border-top: 1px solid gray;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.app_header {
+  padding: 10px 60px 10px 60px;
+  width: 100%;
+  border-bottom: 1px solid #cfcfcf;
+  background: linear-gradient(180deg, #cfcfcf 0%, #f0f0f0 100%);
+  display: flex;
+  justify-content: center;
+}
+.app_header_wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.app_main {
+  padding-bottom: 100px;
+}
+.app_title {
+  color: #161616;
+  font-size: 30px;
+  font-weight: 700;
+}
+.app_logo {
+  display: flex;
+  align-items: center;
+}
+.app_logo img {
+  width: 50px;
+  height: auto;
+}
+.app_settings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.app_settings_wrapper {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+}
+.app_settings_button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+}
+.app_settings_button img {
+  width: 30px;
+  height: auto;
+}
+.app_settings_dropdown {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  padding: 20px;
+  display: none;
+}
+.app_settings_language {
+  display: flex;
+  gap: 10px;
+}
+.app_settings_language label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.app_settings_language label img {
+  width: 20px;
+  height: auto;
+}
+.app_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app_nav_list {
+  display: flex;
+  gap: 150px;
+  font-family: "El Messiri", sans-serif;
+  list-style: none;
+}
+.app_nav_list li a {
+  text-decoration: none;
+  color: #161616;
+  font-size: 22px;
+  font-weight: 500;
+}
+.app_functions_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.app_functions_list_item {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  flex-direction: column;
+  gap: 10px;
+  padding: 50px 30px 30px 30px;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("img/Fondos_archivo.jpg") center center no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.app_functions_list_item img {
+  max-width: 250px;
+  height: auto;
+}
+.app_functions_list_item p {
+  font-size: 18px;
+  font-weight: 500;
+  max-width: 250px;
+}
+.app_functions_list a {
+  text-decoration: none;
+  color: #fff;
+}
+.app_main_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.app_main_text {
+  padding: 50px 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app_language_selector {
+  padding: 10px 15px;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: "El Messiri", sans-serif;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  position: relative;
+}
+.app_language_selector:hover {
+  border-color: #999;
+}
+.app_language_selector:focus {
+  border-color: #666;
+  box-shadow: 0 0 5px rgba(102, 102, 102, 0.5);
+}
+.app_language_selector option {
+  font-family: "El Messiri", sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+.app_language_selector option:hover {
+  background-color: #f0f0f0;
+}
+.application_form {
+  display: flex;
+  flex-direction: column;
+}
+.application_form h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #161616;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 20px;
+}
+.form_group_date {
+  display: flex;
+  flex-direction: column;
+}
+.form_group_date_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form_group_radio {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form_personal_info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0 20px;
+}
+.form_general_info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.form_main_content {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0 50px;
+}
+.form_submit_button {
+  padding: 15px 30px;
+  font-family: "El Messiri", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  background: rgb(0, 106, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.form_submit_button:hover {
+  background: rgb(0, 86, 204);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.form_submit_button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(56, 142, 60, 0.5);
+}
+.form_submit_button:active {
+  transform: scale(0.98);
+}
+.form_section {
+  margin: 25px 0 25px;
+}
+.form_input_radio {
+  transform: scale(1.5);
+}
+.form_radio_wrapper {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.formal {
+  padding: 10px 15px;
+  font-family: "El Messiri", sans-serif;
+  font-size: 18px;
+  color: #333;
+  background: #fff;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  outline: none;
+}
+.formal:hover {
+  border-color: #999;
+}
+.formal:focus {
+  border-color: #666;
+  box-shadow: 0 0 5px rgba(102, 102, 102, 0.5);
+}
+.formal::-moz-placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+.formal::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+.about {
+  padding: 32px 0 100px;
+  margin: 0 auto;
+  max-width: 768px;
+  color: #333;
+}
+.about h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+  text-align: center;
+}
+.about li, .about p {
+  font-size: 18px;
+}
+.about h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  color: #0057b8;
+}
+.about p {
+  margin-bottom: 16px;
+}
+.about ul,
+.about ol {
+  margin-bottom: 24px;
+  padding-left: 20px;
+}
+.about ul li,
+.about ol li {
+  margin-bottom: 8px;
+}
+.about ul li strong,
+.about ol li strong {
+  font-weight: 600;
+}
+.about ul ul,
+.about ol ul {
+  list-style-type: disc;
+}
+.about ul ol,
+.about ol ol {
+  list-style-type: decimal;
+}
+.about ul {
+  margin-top: 8px;
+  padding-left: 24px;
+  list-style-type: circle;
+}/*# sourceMappingURL=main.css.map */
