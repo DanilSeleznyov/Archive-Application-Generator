@@ -11,6 +11,12 @@
   align-items: center;
   flex-direction: column;
   background-color: #f0f0f0;
+  width: 100%;
+}
+
+.section {
+  padding: 0 20px 0 20px;
+  width: 100%;
 }
 
 body {
@@ -34,14 +40,39 @@ h3 {
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width: 875px) {
+  .app_header {
+    padding: 10px;
+  }
+}
 .app_header_wrapper {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 450px) {
+  .app_header_wrapper {
+    align-items: center;
+    justify-content: center;
+  }
+}
 .app_main {
   padding-bottom: 100px;
+}
+.app_main_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.app_main_text {
+  padding: 50px 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .app_title {
   color: #161616;
@@ -55,6 +86,16 @@ h3 {
 .app_logo img {
   width: 50px;
   height: auto;
+}
+@media screen and (max-width: 450px) {
+  .app_logo {
+    display: none;
+  }
+}
+.app_desc {
+  font-size: 18px;
+  max-width: 700px;
+  text-align: center;
 }
 .app_settings {
   display: flex;
@@ -99,6 +140,11 @@ h3 {
   width: 20px;
   height: auto;
 }
+@media screen and (max-width: 450px) {
+  .app_settings {
+    display: none;
+  }
+}
 .app_nav {
   display: flex;
   justify-content: center;
@@ -106,15 +152,39 @@ h3 {
 }
 .app_nav_list {
   display: flex;
+  align-items: center;
   gap: 150px;
   font-family: "El Messiri", sans-serif;
   list-style: none;
+  line-height: 100%;
+}
+@media screen and (max-width: 875px) {
+  .app_nav_list {
+    gap: 30px;
+  }
 }
 .app_nav_list li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
   text-decoration: none;
   color: #161616;
   font-size: 22px;
   font-weight: 500;
+}
+.app_nav_list li :hover {
+  color: #0057b8;
+}
+@media screen and (max-width: 576px) {
+  .app_nav_list li a {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .app_nav_list li a {
+    font-size: 18 px;
+  }
 }
 .app_functions_list {
   display: flex;
@@ -149,18 +219,6 @@ h3 {
 .app_functions_list a {
   text-decoration: none;
   color: #fff;
-}
-.app_main_wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.app_main_text {
-  padding: 50px 0 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .app_language_selector {
   padding: 10px 15px;
@@ -199,6 +257,8 @@ h3 {
 .application_form {
   display: flex;
   flex-direction: column;
+  max-width: 700px;
+  width: 100%;
 }
 .application_form h2 {
   font-size: 28px;
@@ -242,7 +302,10 @@ h3 {
 .form_main_content {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 50px 0 50px;
+  width: 100%;
 }
 .form_submit_button {
   padding: 15px 30px;
@@ -277,6 +340,11 @@ h3 {
   gap: 10px;
   font-size: 18px;
 }
+@media screen and (max-width: 450px) {
+  .form_option_text {
+    display: none;
+  }
+}
 
 .formal {
   padding: 10px 15px;
@@ -287,6 +355,11 @@ h3 {
   border: 1px solid #cfcfcf;
   border-radius: 5px;
   outline: none;
+  width: 100%;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .formal:hover {
   border-color: #999;
@@ -305,8 +378,11 @@ h3 {
 }
 
 .about {
-  padding: 32px 0 100px;
-  margin: 0 auto;
+  padding: 32px 10px 100px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   max-width: 768px;
   color: #333;
 }
@@ -317,7 +393,8 @@ h3 {
   color: #1a1a1a;
   text-align: center;
 }
-.about li, .about p {
+.about li,
+.about p {
   font-size: 18px;
 }
 .about h2 {
@@ -355,4 +432,20 @@ h3 {
   margin-top: 8px;
   padding-left: 24px;
   list-style-type: circle;
+}
+.about p, .about ul, .about ol {
+  text-align: left;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0 50px;
+  border-top: 1px solid #cfcfcf;
+  width: 100%;
+  background: linear-gradient(180deg, #f0f0f0 0%, #cfcfcf 100%);
+}
+.footer_text {
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
