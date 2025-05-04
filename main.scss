@@ -45,7 +45,7 @@ $max-width: 768px;
 
 body {
 	font-family: 'El Messiri', sans-serif;
-	background-color: #f0f0f0;
+	background: #f0f0f0;
 	color: #333;
 }
 
@@ -80,7 +80,7 @@ h3 {
 	}
 
 	&_main {
-		padding-bottom: 100px;
+		padding-bottom: 300px;
 		&_wrapper {
 			display: flex;
 			flex-direction: column;
